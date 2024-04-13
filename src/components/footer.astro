@@ -10,15 +10,31 @@ import github from 'public/images/github.png';
   footer {
     text-align: center;
     color: var(--highlight-color);
+    margin: 4em 0;
   }
 
   .footer-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     height: 100%;
     width: 100%;
+  }
+  .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+  }
+  p{
+    color: var(--secondary-color);
+  }
+
+  span{
+    color: var(--highlight-color);
+    cursor: pointer;
   }
 </style>
 
@@ -26,13 +42,16 @@ import github from 'public/images/github.png';
   <p>&lt;Social Links/&gt;</p>
   <div class="container-wrapper">
     <div class="footer-container">
+    <div class="links">
       <div class="link">
-       <a href="https://www.instagram.com/reece_garbutt_/"> <Image src={insta} alt='Instagram Link'/></a>
-      </div>
-      <div class="link"> <a href="https://ie.linkedin.com/in/reece-farrell-834654252"><Image src={linkedin} alt='LinkedIn Link'/></a></div>
-      <div class="link">
-        <a href="https://github.com/Garbutt"><Image src={github} alt='Github Link'/></a>
-      </div>
+        <a href="https://www.instagram.com/reece_garbutt_/"> <Image src={insta} alt='Instagram Link'/></a>
+       </div>
+       <div class="link"> <a href="https://ie.linkedin.com/in/reece-farrell-834654252"><Image src={linkedin} alt='LinkedIn Link'/></a></div>
+       <div class="link">
+         <a href="https://github.com/Garbutt"><Image src={github} alt='Github Link'/></a>
+       </div>
+    </div>
+      <p>If you have any questions about a job, project, or any general questions, feel free to email me at <span>reecegarbutt@outlook.com</span></p>
     </div>
   </div>
 </footer>

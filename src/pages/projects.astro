@@ -1,0 +1,49 @@
+---
+import Layout from '@layouts/layout.astro';
+import Card from '@components/card.astro';
+
+import hfc from 'public/images/hfc.png';
+import java from 'public/images/javaProjects.png'
+import blackjack from 'public/images/blackjack.png';
+---
+<style>
+  section{
+    margin-top: 2.5em;
+  }
+
+  h3, p{
+    text-align: center;
+    color: var(--secondary-color);
+    white-space: nowrap;
+}
+
+/*Screens bigger than 1150px */
+@media only screen and (min-width: 1150px){
+  section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+</style>
+<Layout title='About'>
+  <h1>About</h1>
+
+  <section>
+    <Card image={hfc}>
+      <h3>Web Projects</h3>
+      <p>HTML, CSS, JS</p>
+      </Card>
+      
+      <Card image={java}>
+        <h3>Java Projects</h3>
+        <p>Object Oriented Programming</p>
+        </Card>
+      
+        <Card image={blackjack}>
+          <h3>C-Sharp Projects</h3>
+          <p>.Net</p>
+          </Card>
+      
+  </section>
+</Layout>
