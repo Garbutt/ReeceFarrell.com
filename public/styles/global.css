@@ -144,4 +144,8 @@ p{
   .background, .project{
     flex-direction: row;
   }
+
+  .project-text{
+    padding: 1em 2em;
+  }
 }
