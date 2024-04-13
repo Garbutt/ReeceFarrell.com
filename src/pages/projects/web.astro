@@ -26,6 +26,7 @@ import Layout from "@layouts/layout.astro";
         margin-top: 5em;
     }
 
+
 </style>
 <Layout title="Web Projects">
     
@@ -33,30 +34,33 @@ import Layout from "@layouts/layout.astro";
     <h1>My <span>Web Projects</span></h1>
 </section>
 
-<h2 class="project-heading">Hardwicke FC</h2>
+<h3 class="project-heading">Hardwicke FC</h3>
 <section class="project">
+   <div class="background">
     <video src="../public/images/hardwickeFC.mp4" controls="" poster="../public/images/hfc.png"></video>
     <p class="project-text">In the showcased video, you'll see the result of the work I did to design and build Hardwicke FC's website. Collaborating closely with the club's manager, Anthony Perry, I crafted a professional and visually appealing website. My goal was to enhance the club's visibility, and the result is a dynamic online presence that reflects the essence of Hardwicke FC.
         <br><br>
         The website was developed with Astro, a web development framework which makes it easy to create static websites and web applications.
          <br><br><a href="https://hardwickefc.com/" target="_blank"><span>Visit Hardwicke FC</span></a>
     </p>
+   </div>
 </section>
 
-<h2 class="project-heading">Greater Dublin Roofing & Guttering</h2>
+<h3 class="project-heading">Greater Dublin Roofing & Guttering</h3>
 <section class="project">
-    <video src="../public/images/gdgr.mp4" controls="" poster="../public/images/gdgr.png"></video>
+   <div class="background"> <video src="../public/images/gdgr.mp4" controls="" poster="../public/images/gdgr.png"></video>
     <p class="project-text">
 
         Greater Dublin Roofing & Guttering is another site i got the pleasure of developing. It is a website to showcase all of the information you need about the company, the works they do and have done in the past, and a page for contacting them.
         <br><br>
         Like the last project, it was also developed using Astro. 
          <br><br><a href="https://greaterdublinroofingandguttering.com/" target="_blank"><span>Visit Greater Dublin Roofing & Guttering</span></a>
-    </p>
+    </p></div>
 </section>
 
-<section><div class="project">
-    <a href="/projects"><button><span class="material-symbols-outlined">
+<section class="project">
+    <a href="../projects"><button><span class="material-symbols-outlined">
         arrow_back
-        </span>Return</button></div></section></a>
+        </span>Return</button></a>
+</section>
 </Layout>
