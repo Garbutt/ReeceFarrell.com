@@ -121,7 +121,8 @@ p{
 
 .background{
   background-color: var(--highlight-color-faded);
-  padding: 1em;
+  padding: 2em 0 0 0;
+  margin: 2em;
   border-radius: 10px;
 }
 .project-heading{
