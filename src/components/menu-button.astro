@@ -1,0 +1,58 @@
+<style>
+  .menu-button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 4rem;
+    height: 0.4rem;
+    background-color: var(--secondary-color);
+    margin: 0.75rem 0;
+    transition: 0.4s;
+    border-radius: var(--border-radius);
+  }
+
+  .bar2 {
+    width: 3rem;
+    margin-left: 1rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .menu-button {
+      display: none;
+    }
+  }
+</style>
+
+<button aria-label='Menu Button' class='menu-button'>
+  <div class='bar1'></div>
+  <div class='bar2'></div>
+  <div class='bar3'></div>
+</button>
+
+<script>
+  const nav = document.querySelector('header nav') as HTMLElement;
+  const menuBar1 = document.querySelector('.bar1') as HTMLElement;
+  const menuBar2 = document.querySelector('.bar2') as HTMLElement;
+  const menuBar3 = document.querySelector('.bar3') as HTMLElement;
+
+  document.querySelector('button.menu-button')?.addEventListener('click', () => {
+    // Change menu button to open/close
+    menuBar1?.style?.transform === 'rotate(-45deg) translate(-0.7rem, 0.7rem)'
+      ? (menuBar1.style.transform = 'rotate(0) translate(0)')
+      : (menuBar1.style.transform = 'rotate(-45deg) translate(-0.7rem, 0.7rem)');
+    menuBar2?.style?.opacity === '0' ? (menuBar2.style.opacity = '1') : (menuBar2.style.opacity = '0');
+    menuBar3?.style?.transform === 'rotate(45deg) translate(-0.9rem, -0.9rem)'
+      ? (menuBar3.style.transform = 'rotate(0) translate(0)')
+      : (menuBar3.style.transform = 'rotate(45deg) translate(-0.9rem, -0.9rem)');
+
+    // Show/hide nav menu on mobile
+    nav?.style?.display === 'block' ? (nav.style.display = 'none') : (nav.style.display = 'block');
+  });
+</script>

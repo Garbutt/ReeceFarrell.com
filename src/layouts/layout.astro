@@ -1,0 +1,64 @@
+---
+import Footer from '@components/footer.astro';
+import Header from '@components/header.astro';
+import { SITE_URL } from '@helpers/constants';
+
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  type?: string;
+  url?: string;
+  pathname?: string;
+  image?: string;
+}
+
+const {
+  title = 'Web Starter',
+  description = 'Web starter template',
+  keywords,
+  type = 'website',
+  url = SITE_URL,
+  pathname = '/',
+  image = '',
+} = Astro.props;
+---
+
+<html lang='en'>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, viewport-fit=cover maximum-scale=1' />
+    <meta name='title' content={title} />
+    <meta name='description' content={description} />
+    <meta name='keywords' content={keywords} />
+
+    <meta property='og:type' content={type} />
+    <meta property='og:url' content={`${url}/${pathname}`} />
+    <meta property='og:title' content={title ? `${title} | ${description}` : description} />
+    <meta property='og:description' content={description} />
+    <meta property='og:image' content={image} />
+
+    <meta property='twitter:card' content='summary_large_image' />
+    <meta property='twitter:url' content={`${url}/${pathname}`} />
+    <meta property='twitter:title' content={title ? `${title} | ${description}` : description} />
+    <meta property='twitter:description' content={description} />
+    <meta property='twitter:image' content={image} />
+
+    <meta name='apple-mobile-web-app-cabable' content='yes' />
+    <meta name='apple-mobile-web-app-status-bar-style' content='default' />
+    <meta name='theme-color' content='#f1f2f7' />
+    <link rel='apple-touch-icon' href='/images/icons/icon-192x192.png' />
+    <link rel='shortcut icon' type='image/png' href='/images/icons/favicon.png' />
+    <link rel='stylesheet' href='/styles/global.css' />
+
+    <title>{title ? `${title} | ${description}` : description}</title>
+  </head>
+
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+
+  </body>
+</html>
