@@ -27,7 +27,7 @@ const { image = placeholderImage, link = '#' } = Astro.props;
     border-radius: 10px;
     border: solid 2px var(--highlight-color);
     padding: .5em;
-    margin: 2em;
+    margin: 2em 0;
 }
 
 .card-container{
@@ -48,7 +48,7 @@ a{
 
 <div class="card-container">
     <div class="blog-card">
-        <a href="">
+        <a href={link}>
         <Image src={image} alt='Placeholder image' />
 
         <slot/>
