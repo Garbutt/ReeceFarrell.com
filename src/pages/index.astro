@@ -16,10 +16,10 @@ import csLogo from "public/images/c-sharp.png";
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 300px;
+  height: 100%;
   align-items: center;
   justify-content: center;  
-  margin-top: 2.5em;
+  margin: 4em 0;
 }
 
   .sub-text {
@@ -127,8 +127,38 @@ import csLogo from "public/images/c-sharp.png";
   text-align: center;
 }
 
+/*Screens bigger than 500px */
+@media only screen and (min-width: 500px) {
+
+.text-intro {
+  font-size: 95px;
+}
+
+.color-change{
+  font-size: 140px;
+}
+
+.dynamic-text .dynamic-list {
+  font-size: 29px;
+}
+}
+
+
 /*Screens bigger than 1000px */
 @media only screen and (min-width: 1000px){
+
+  .text-intro {
+      font-size: 114px;
+    }
+
+    .color-change{
+      font-size: 140px;
+    }
+
+    .dynamic-text .dynamic-list {
+      font-size: 31px;
+    }
+
  /*about*/
   .about-container{
     flex-direction: row;
@@ -148,6 +178,36 @@ import csLogo from "public/images/c-sharp.png";
     justify-content: space-around;
   }
 }
+
+/*Screens bigger than 1300px */
+@media only screen and (min-width: 1300px) {
+    .text-intro {
+      font-size: 150px;
+    }
+
+    .color-change {
+      font-size: 217px;
+    }
+
+    .dynamic-text .dynamic-list {
+      font-size: 45px;
+    }
+  }
+
+  /*Screens bigger than 1700px */
+  @media only screen and (min-width: 1700px) {
+    .text-intro {
+      font-size: 180px;
+    }
+
+    .color-change {
+      font-size: 260px;
+    }
+
+    .dynamic-text .dynamic-list {
+      font-size: 53px;
+    }
+  }
 </style>
 
 

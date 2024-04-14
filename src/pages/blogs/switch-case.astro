@@ -1,0 +1,52 @@
+---
+import Layout from "@layouts/layout.astro"
+import { Image } from "astro:assets"
+
+import switchCase1 from '../../../public/images/switchCase1.png';
+import switchCase2 from '../../../public/images/switchCase2.png';
+
+import imageList from '../../../public/images/imageList.png';
+---
+
+<style>
+  section img{
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        border: solid 5px var(--highlight-color);
+    }
+
+    p{
+        color: var(--secondary-color);
+    }
+
+
+</style>
+
+<Layout title="Assigning values to images with a switch case">
+    <section class="heading"><h1><span>Assigning values to images with a switch case</span></h1></section>
+
+    <section class="blog-content">
+   <div class="blog-content-wrapper">
+    <Image src={switchCase1} alt='Switch Case Image'/>
+    <p>This page is referencing code from the <span>
+        <a href="../projects/csharp" target="_blank">Blackjack Project</a></span> so to fully understand some aspects you should head over to that page and watch the video of the game being played.
+        <br><br>
+        The code shown above and below is that of a simple switch case which will link a value to each image/card. What this means is we can give the 4 cards suits with number of 2 for example a value of 2 if its drawn from the deck. We have to do this with each card in the deck.</p>
+    <Image src={switchCase2} alt='Switch Case Image'/>
+
+    
+    <p>After all images 0-51 (since we count 0 as 1) are giving a value in the switch case, we can break out of the case and return the value. We also have a default value of 0 set.
+    <br><br>
+        Below you can see the image list mentioned with all the cards in an order (2s, 3s, 4s etc...). Its essential that they are ordered to suit your switch case, failure to do so will result in wrong values for different cards.
+        <br><br>
+        Carrying on from this we can add a randomiser to the "cardValue" variable shown in the second image which will give the player a random card with the correct value.</p>
+
+        <Image src={imageList} alt='Switch Case Image'/>
+
+    <a href="/blogs"><button class="return-button"><span class="material-symbols-outlined">
+        arrow_back
+        </span>Return</button></a>
+    </div>
+    </section>
+</Layout>

@@ -1,0 +1,42 @@
+---
+import Layout from "@layouts/layout.astro"
+import { Image } from "astro:assets"
+
+import blogImage1 from '../../../public/images/hardwickeBlog.png';
+import blogImage2 from '../../../public/images/hardwickeBlog1.png';
+---
+
+<style>
+  section img{
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        border: solid 5px var(--highlight-color);
+    }
+
+    p{
+        color: var(--secondary-color);
+    }
+
+
+</style>
+
+<Layout title="Creating a blog with Astro">
+    <section class="heading"><h1><span>Creating a blog with Astro</span></h1></section>
+
+    <section class="blog-content">
+   <div class="blog-content-wrapper">
+    <Image src={blogImage1} alt='Image Search Engine Blog'/>
+    <p>As a junior software developer, Astro.build makes life a lot easier when it comes to designing and developing. It's great for building blogs and i even used it to develop this site. The site shown above is the blog I built for Hardwicke FC which you can view <span>
+        <a href="https://hardwickefc.com/blog/blog/" target="_blank">here</a></span>.</p>
+    <Image src={blogImage2} alt='Image Search Engine Blog'/>
+
+    <h3><span>What are blogs useful for?</span></h3>
+    <p>Many people use blogs to drive traffic to their websites or web applications. They are helpful for posting regular updates or information articles that people globally can read. With Astro, developers can develop layouts and reuse them throughout the site making it faster to make websites and web applications.</p>
+
+    <a href="/blogs"><button class="return-button"><span class="material-symbols-outlined">
+        arrow_back
+        </span>Return</button></a>
+    </div>
+    </section>
+</Layout>
