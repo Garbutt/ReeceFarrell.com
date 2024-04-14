@@ -1,0 +1,58 @@
+---
+import Layout from "@layouts/layout.astro";
+---
+<style>
+  
+
+    video{
+        width: 100%;
+        max-width: 500px;  
+    }
+
+    button{
+        padding: 13px 0;
+        background-color: var(--highlight-color);
+        color: var(--secondary-color);
+        border: solid 2px var(--secondary-color);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        cursor: pointer;
+        width: 120px;
+        margin-top: 5em;
+    }
+
+
+</style>
+<Layout title="Web Projects">
+    
+<section class="heading">
+    <h1>My <span>C-Sharp Projects</span></h1>
+</section>
+
+<h3 class="project-heading">BlackJack </h3>
+<section class="project">
+   <div class="background">
+    <video controls="" poster="/images/blackjack.png"><source src="/images/blackjack.mp4"> </video>
+    <p class="project-text">
+    This project consists of the game which many may be familiar with, Blackjack. The game rules are similar to the original, the only difference being the ace is always worth 11. The dealer will also be assigned a value between 17-25. <br><br>Since it is an over 18's game , i also designed and implemented a registration form which ensures the user is over the age of 18 and has agreed to the terms and conditions. If the user isnt over the age of 18 and or has not agreed to the terms and conditions, they cannot play.
+    </p>
+   </div>
+</section>
+
+<h3 class="project-heading">Car Database</h3>
+<section class="project">
+   <div class="background"> <video controls="" poster="/images/carDatabase.png"><source src="/images/carDatabase.mp4"></video>
+    <p class="project-text">
+        For this project, I developed a car database using C-Sharp. I created both the database and Graphical User Interface (GUI) for this project.<br><br> It allows users to navigate specific records, by using the data controls in the bottom left of the screen. Users can add new records, update them and delete them. I also included a help facility to help users who are having trouble functioning the program. 
+    </p></div>
+</section>
+
+<section class="project">
+    <a href="/projects"><button><span class="material-symbols-outlined">
+        arrow_back
+        </span>Return</button></a>
+</section>
+</Layout>
