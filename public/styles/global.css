@@ -112,6 +112,10 @@ p{
   text-align: center
 }
 
+.heading{
+  margin-top: 5em;
+}
+
 /*Projects Layout*/
 .background, .project{
   display: flex;
