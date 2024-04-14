@@ -127,7 +127,7 @@ p{
 .background{
   background-color: var(--highlight-color-faded);
   padding: 2em;
-  margin: 2em;
+  margin: 1em;
   border-radius: 10px;
 }
 .project-heading{
