@@ -1,0 +1,52 @@
+---
+import Layout from "@layouts/layout.astro";
+---
+<style>
+  
+
+    video{
+        width: 100%;
+        max-width: 500px;  
+    }
+
+    button{
+        padding: 13px 0;
+        background-color: var(--highlight-color);
+        color: var(--secondary-color);
+        border: solid 2px var(--secondary-color);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        cursor: pointer;
+        width: 120px;
+        margin-top: 5em;
+    }
+
+
+</style>
+<Layout title="Web Projects">
+    
+<section class="heading">
+    <h1>My <span>Java Projects</span></h1>
+</section>
+
+<h3 class="project-heading">Home Insurance Calculator</h3>
+<section class="project">
+   <div class="background">
+    <video controls="" poster="/images/javaProjects.png"><source src="/images/java1.mp4"> </video>
+    <p class="project-text">
+        This simple JAVA project is used for calculating the cost of home insurance and the cost of rent using a specific formula I developed which factors in the amout of rooms, windows etc.. it then returns the cost of rent and insurance and all the details about the house.
+<br><br>
+        Since this project is built with JAVA, I used OOP, which is a style of programming in which developers build classes of objects that have methods linked to them. This means i can re-use code to make objects or use the classes for methods.
+    </p>
+   </div>
+</section>
+
+<section class="project">
+    <a href="/projects"><button><span class="material-symbols-outlined">
+        arrow_back
+        </span>Return</button></a>
+</section>
+</Layout>
