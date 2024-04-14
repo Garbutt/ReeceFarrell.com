@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets';
+import placeholderImage from '../../public/images/placeholder.webp';
+
+interface Props {
+  image?: ImageMetadata;
+  link?: string;
+}
+
+const { image = placeholderImage, link = '#' } = Astro.props;
+---
+
+<style>
+    .blog-card img{
+  width: 5rem;
+  height: 100%;
+}
+
+.blog-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--highlight-color-faded);
+    border-radius: 10px;
+    border: solid 2px var(--highlight-color);
+    padding: .5em;
+    margin: 2em;
+}
+
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+a{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+</style>
+
+<div class="card-container">
+    <div class="blog-card">
+        <a href="">
+        <Image src={image} alt='Placeholder image' />
+
+        <slot/>
+    </a>
+</div>
+</div>
